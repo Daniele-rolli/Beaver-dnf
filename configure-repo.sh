@@ -11,14 +11,14 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-# Create the repository configuration file
-echo "[${REPO_NAME}]" | tee -a $REPO_FILE
-echo "name=${REPO_NAME}" | tee -a $REPO_FILE
-echo "baseurl=${REPO_BASEURL}" | tee -a $REPO_FILE
-echo "enabled=1" | tee -a $REPO_FILE
-echo "gpgcheck=0" | tee -a $REPO_FILE
+# Download the repository configuration file
+curl -o $REPO_FILE "${REPO_BASEURL}configure-repo.sh"
 
-echo "Repository configuration created in ${REPO_FILE}"
+# Make the script executable
+chmod +x $REPO_FILE
+
+echo "Repository configuration script downloaded to ${REPO_FILE}"
 
 # Update the repository metadata
 dnf makecache
+
