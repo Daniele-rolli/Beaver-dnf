@@ -1,0 +1,6 @@
+[beaver-dnf]
+name=Beaver Notes' DNF repo
+baseurl=https://github.com/Daniele-rolli/Beaver-dnf/raw/main/
+enabled=1
+gpgcheck=0
+
