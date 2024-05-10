@@ -10,7 +10,7 @@ To install Beaver Notes through DNF, first uninstall any previous version of Bea
 
 Create the repo file:
 ```
-curl -o configure-repo.sh https://raw.githubusercontent.com/Beaver-Notes/Beaver-dnf/main/configure-repo.sh && chmod +x configure-repo.sh; sudo ./configure-repo.sh
+curl -o configure-repo.sh https://raw.githubusercontent.com/Daniele-rolli/Beaver-dnf/main/configure-repo.sh && chmod +x configure-repo.sh; sudo ./configure-repo.sh
 ```
 Install Beaver Notes:
 ```
